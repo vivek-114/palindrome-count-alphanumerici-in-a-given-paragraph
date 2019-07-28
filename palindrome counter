@@ -1,0 +1,91 @@
+#include<stdio.h>
+
+#include <string.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    char str[50],str1[50];
+
+    gets(str);
+
+    int i,j,len,t,flag=0,b_space=0,space=0,space_cnt=0,p_cnt=0;
+
+    len=strlen(str);
+
+    for(i=0;i<=len;i++)
+
+    {
+
+        printf("%d",i);
+
+        if(str[i]== ' ' || i==len)
+
+        {
+   
+            space=i;
+
+            space_cnt++;
+
+           // flag++;
+
+           // printf("  %d  ",flag);
+
+        }
+
+        if(space_cnt>0 || i==len)
+
+        {
+
+         t=space-1;
+   
+            for(j=0;b_space<space;b_space++,t--)
+
+            {
+ 
+                
+                if(str[b_space]==str[t]){
+
+                printf(" %c %c ",str[b_space],str[t]);
+
+                flag=1;
+
+                }
+
+                else
+
+                {
+
+                flag=0;
+
+                break;
+
+                }
+
+            }
+
+            b_space=space+1;
+
+        }
+
+        if(flag==1)
+	{
+
+            flag=0;
+
+            p_cnt++;
+
+            printf("%d",p_cnt);
+
+        }
+
+    }
+
+printf("\n%d",p_cnt);
+
+    return 0;
+
+}
