@@ -29,11 +29,6 @@ int main()
             space=i;
 
             space_cnt++;
-
-           // flag++;
-
-           // printf("  %d  ",flag);
-
         }
 
         if(space_cnt>0 || i==len)
@@ -47,16 +42,10 @@ int main()
             {
  
                 
-                if(str[b_space]==str[t]){
-
-                printf(" %c %c ",str[b_space],str[t]);
+                if(str[b_space]==str[t])
 
                 flag=1;
-
-                }
-
                 else
-
                 {
 
                 flag=0;
@@ -78,13 +67,11 @@ int main()
 
             p_cnt++;
 
-            printf("%d",p_cnt);
-
         }
 
     }
 
-printf("\n%d",p_cnt);
+printf("THE TOTAL NUMBER OF ALPHANUMERIC PALINDROMES IN PARAGRAPH IS \n%d WORDS",p_cnt);
 
     return 0;
 
